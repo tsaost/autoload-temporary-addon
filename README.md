@@ -16,7 +16,7 @@ Then you need to edit the file userChrome.js and modify the function installUnpa
 
 The modified userChrome.js then must be copied to your Firefox installation directory.  For example on Windows this is usually "c:\Program Files (x86)\Mozilla Firefox" for the 32-bit version of Firefox.  You can rename the file, but remember to modify the corresponding line pref("general.config.filename", "userChrome.js") in defaults/pref/config-prefs.js
 
-Now your addons from your local directories will be loaded automaticaly whenever Firefox starts.  After editing your code remember to reload it from about:debugging#/runtime/this-firefox. You can also get there via the menu by selecting More Tools | Remote Debugging and the click on "This Firefox" on the left side, but the quickiest way is to bookmark it and then add a bookmark keyword such as "dbg" for quick access.
+Now your addons from your local directories will be loaded automaticaly whenever Firefox starts.  After editing your code remember to reload it from about:debugging#/runtime/this-firefox. You can also get there via the menu by selecting "More Tools", then "Remote Debugging", and click on "This Firefox" on the left side (but the quickiest way is to bookmark it and then add a bookmark keyword such as "dbg" for quick access.)
 
 I hope that Mozilla will not cripple AutoConfig to prevent this workaround for the lack of a Developer Mode like most other browsers.  AutoConfig does not represent a security loophole because if an attacker has access to the Firefox install directory to install or modify config-prefs.js and userChrome.js then every file in the directory, including firefox.exe and omni.ja are at risk already.
 
