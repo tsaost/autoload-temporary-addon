@@ -6,7 +6,7 @@ Since Mozilla will not provide this functionality, I need to find a way to do it
 
 I found another of Mike Kaply's article and found a very useful reply from Make when asked about AddonManager.jsm (https://mike.kaply.com/2012/03/22/customizing-firefox-advanced-autoconfig-files). His comment about Components.utils.import("resource://gre/modules/AddonManager.jsm") provided exactly the information I needed.  After studying his CCK2 code and a few hours of trial and error I found the solution.  What is even better is that this solution seems to work even on the current release version of Firefox (tested on Windows 10 running Firefox version 104.0.2 32-bit)
 
-The procedure is involves a few steps, but it needs to be done only once.
+The procedure involves a few steps, but it needs to be done only once.
 
 First you need to enable AutoConfig aka userchrome.js (See https://www.userchrome.org/what-is-userchrome-js.html if you want to understand AutoConfig better) by copying the file config-prefs.js to [Your Firefox install directory]/defaults/pref
 
