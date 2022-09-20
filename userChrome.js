@@ -81,6 +81,9 @@ async function installExtension(path, temporary) {
 
 
 function installUnpackedExtensions() {
+	// If you want to have more security, put your personal extension in your
+	// Firefox install directory so that they can be modified only with
+	// admin access just like config-prefs.js and userChrome.js and 
 	installExtension("d:\\workspace\\go\\src\\chrome\\selectionsk", true);
 	installExtension("d:\\workspace\\go\\src\\chrome\\copylink", true);
 }
