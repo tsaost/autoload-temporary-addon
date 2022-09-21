@@ -11,11 +11,11 @@ I found another [article by Mike Kaply](https://mike.kaply.com/2012/03/22/custom
 
 The procedure involves a few steps, but it needs to be done only once.
 
-First you need to enable [AutoConfig aka userchrome.js](https://www.userchrome.org/what-is-userchrome-js.html) by copying the file config-prefs.js to [Your Firefox install directory]/defaults/pref
+First you need to enable [AutoConfig aka userchrome.js](https://www.userchrome.org/what-is-userchrome-js.html) by copying the file [config-prefs.js](https://github.com/tsaost/autoload-temporary-addon/blob/main/config-prefs.js) to [Your Firefox install directory]/defaults/pref
 
 Note: For best security, on Windows it is best to leave your Firefox install in "c:\Program Files" so that your config-prefs.js and userChrome.js can only be modified when you are in root/admin mode.
 
-Then you need to edit the file userChrome.js and modify the function installUnpackedExtensions() to reflect the locations of your own addons.
+Then you need to edit the file [userChrome.js](https://github.com/tsaost/autoload-temporary-addon/blob/main/userChrome.js) and modify the function installUnpackedExtensions() to reflect the locations of your own addons.
 
 The modified userChrome.js then must be copied to your Firefox installation directory.  For example on Windows this is usually "c:\Program Files (x86)\Mozilla Firefox" for the 32-bit version of Firefox.  You can rename the file, but remember to modify the corresponding line pref("general.config.filename", "userChrome.js") in defaults/pref/config-prefs.js
 
