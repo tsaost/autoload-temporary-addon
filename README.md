@@ -1,4 +1,4 @@
-# Autoload of Temporary Firefox Addons
+# "Permanent Install" (Autoload) of Temporary Firefox Addons
 
 One of the problems that really bothers me as an extension developer is that Firefox took away the ability to run personal addons from a local file directory without having to package it into a xpi (at least with Developer Edition and ESR it is possible to run your personal xpi without having to sign it, thank goodness).  This is a [bad decision](https://blog.mozilla.org/addons/2015/12/23/loading-temporary-add-ons/) which Mike Kaply also disagreed with: 
 > "This fix doesn't help the thousands of add-ons that are not restartless.  Please just do a developer mode like Chrome.  Have a giant popup that says "You are in developer mode" and be done with it. Please."
