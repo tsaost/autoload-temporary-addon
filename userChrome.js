@@ -97,8 +97,7 @@ function installUnpackedExtensions() {
 */
 try {
   let { classes: Cc, interfaces: Ci, manager: Cm  } = Components;
-  const {Services} = Components.utils.
-						 import('resource://gre/modules/Services.jsm');
+
   function ConfigJS() {
 	  //Services.obs.addObserver(this, 'chrome-document-global-created', false);
 	  // Use this if your extension needs to be loaded after UI is ready
