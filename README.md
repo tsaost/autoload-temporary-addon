@@ -7,7 +7,7 @@ This is a standard feature in every major browser I tried (just turn on "Develop
 
 Since Mozilla [will not provide this functionality](https://bugzilla.mozilla.org/show_bug.cgi?id=1309288#c25), I need to find a way to do it.  I started to google for various options to go about it. Initially I thought about hacking omni.ja directly, but Mike Kaply convince me that it is [better to do it via AutoConfig](https://mike.kaply.com/2013/05/06/dont-unpack-and-repack-omni-jar/).
 
-I found another [article by Mike Kaply](https://mike.kaply.com/2012/03/22/customizing-firefox-advanced-autoconfig-files) and found a very useful reply from Make when asked about AddonManager.jsm . His comment about Components.utils.import("resource://gre/modules/AddonManager.jsm") provided exactly the information I needed.  After studying his CCK2 code and a few hours of trial and error I found the solution.  What is even better is that this solution seems to work even on the current release version of Firefox (tested on Windows 10 running Firefox version 104.0.2 32-bit)
+I found another [article by Mike Kaply](https://mike.kaply.com/2012/03/22/customizing-firefox-advanced-autoconfig-files) and found a very useful reply from Mike when asked about AddonManager.jsm . His comment about Components.utils.import("resource://gre/modules/AddonManager.jsm") provided exactly the information I needed.  After studying his CCK2 code and a few hours of trial and error I found the solution.  What is even better is that this solution seems to work even on the current release version of Firefox (tested on Windows 10 running Firefox version 104.0.2 32-bit)
 
 The procedure involves a few steps, but it needs to be done only once.
 
