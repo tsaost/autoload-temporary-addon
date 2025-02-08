@@ -18,6 +18,12 @@ be modified when you are in root/admin mode.
 // https://mike.kaply.com/2016/09/08/debugging-firefox-autoconfig-problems/
 lockPref("a.b.c.d", "1.2.3.4"); // Debugging Firefox AutoConfig Problems
 
+const { AddonManager } =
+ChromeUtils.importESModule("resource://gre/modules/AddonManager.sys.mjs");
+//find the modules here: https://searchfox.org/mozilla-central/source/toolkit/modules
+const { FileUtils } =
+ChromeUtils.importESModule("resource://gre/modules/FileUtils.sys.mjs");
+
 // userChrome.js file for [Firefox program folder]
 // file name must match the name in [Firefox program folder]\defaults\pref
 
@@ -107,12 +113,6 @@ try {
 	  // "AddonManager is not initialized"
 	  Services.obs.addObserver(this, 'final-ui-startup', false);
   }
-
-  const { AddonManager } =
-	  Components.utils.import("resource://gre/modules/AddonManager.jsm");
-
-  const { FileUtils } =
-	  Components.utils.import("resource://gre/modules/FileUtils.jsm");
 
   ConfigJS.prototype = {
 
